@@ -1,0 +1,72 @@
+Student Performance Tracker - Demo Logins
+=========================================
+
+App URL:
+  http://localhost:5173/
+
+Default password for every seeded account:
+  Password@123
+
+
+Dataset
+-------
+The seeded dataset is the real DSCE BE AI & ML 3rd semester 2025-26 Odd cohort
+(trimmed to 60 students). Marks for IAI (3 CIAs + Poster + Assignment) and RPA
+(Lab Test + Class Work + Mini Project) come straight from the institute
+consolidated sheets; DBMS / DSA / COA use real CIA-1 totals with synthesised
+CIA-2 / CIA-3 / Assignment. Attendance is synthesised per-period but aggregates
+to the per-student per-subject totals from the Student Slot Type-Wise Matrix.
+
+Class section: AIML 3 — A   (grade 3, section A, AY 2025-26)
+
+
+HOD / Admin
+-----------
+Username: admin
+Email:    admin@school.test
+
+
+Teachers (5)
+------------
+Username: teacher1    Mrs. Ensteih Silvera  · Introduction to AI (22AI32)
+Username: teacher2    Ms. Anupama Vijaya    · Database Management System (22AI33)
+Username: teacher3    Dr. Reshma S          · Data Structures with Applications (22AI34)
+Username: teacher4    Ms. Deepshree Buchade · Computer Org & Architecture (22AI362)
+Username: teacher5    Mrs. Sangeetha B      · Robotic Process Automation (22AIL381)
+
+
+Proctors
+--------
+Username: proctor1    Vikram Iyer   · Block-A (students 01-30)
+Username: proctor2    Lakshmi Reddy · Block-B (students 31-60)
+
+
+Students (60, all from the real 1DS24AIxxx cohort)
+--------
+Username: studentNN   (NN = 01..60)
+Each maps to a real USN (admission no. = 1DS24AI001 .. 1DS24AI060 with a couple
+of 1DS25AI400 series at the end).
+
+Notable accounts:
+  student05  →  ARPAN S (1DS24AI005)
+                Boosted to pass every subject (≥60% per test) and attendance
+                ≥85%, plus all fees marked PAID. The intended "happy path" demo.
+
+  student01  →  ABHISHEK A (1DS24AI001) — borderline / failing several subjects.
+  student09  →  CS PRATYUSHA — top performer.
+  student16  →  JEEVAN A E — gaps in DBMS / DSA / COA.
+
+
+Parents
+-------
+Username: parentNN    (NN = 01..60) — synthesised, one per student.
+
+
+Note
+----
+- Subjects are subject-agnostic in the FE/BE; if you swap the seed for a
+  different cohort (different subject codes), nothing else needs to change.
+- Real CIA-1 data for DBMS/DSA/COA is transplanted positionally from the
+  IA_Marks (12, 14, 15) files — those files are from a different cohort
+  (1DS23AI), so the marks per row are real but not tied to the student name
+  they sit next to. Acceptable trade-off given the data we have.

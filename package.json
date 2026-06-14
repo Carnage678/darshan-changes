@@ -1,0 +1,36 @@
+{
+  "name": "miniproj-arpan",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Student Performance Tracker — React + Vite frontend, Node/Express + Prisma + SQLite backend",
+  "workspaces": [
+    "shared",
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:backend dev:frontend",
+    "dev:frontend": "npm run dev --workspace frontend",
+    "dev:backend": "npm run dev --workspace backend",
+    "build": "npm run build --workspace frontend",
+    "start:backend": "npm run start --workspace backend",
+    "postinstall": "npm run prisma:generate --workspace backend",
+    "db:setup": "npm run db:setup --workspace backend",
+    "typecheck": "npm-run-all typecheck:shared typecheck:backend typecheck:frontend",
+    "typecheck:shared": "npm run typecheck --workspace shared",
+    "typecheck:backend": "npm run typecheck --workspace backend",
+    "typecheck:frontend": "npm run typecheck --workspace frontend",
+    "record-demos": "node scripts/record-demos.mjs",
+    "record-demos:all": "node scripts/record-demos.mjs all",
+    "record-gemini-demo": "node scripts/record-gemini-demo.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "npm-run-all": "^4.1.5",
+    "playwright": "^1.60.0",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=18.18"
+  }
+}
